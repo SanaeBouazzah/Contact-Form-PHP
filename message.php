@@ -9,7 +9,7 @@
 
      if(!empty($email) && !empty($message)){
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-          $receiver = "sanaebouazzah2000@gmail.com";
+          $receiver = "example@gmail.com";
           $subject = "Form: $name <$email>";
           $body = "Name : $name\nEmail : $email\nPhone :$phone\nWebsit : $website\nMessage : $message\n\nRegards, \n$name";
           $sender = "From : $email";
