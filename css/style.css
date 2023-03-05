@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  min-height: 100vh;
+  padding:0 10px;;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+.wrapper{
+  width:720px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #a1a1a1;
+  border-radius: 15px;
+  padding:20px;
+}
+.wrapper header{
+  font-size: 22px;
+  font-weight: 600;
+  padding:20px 30px;
+  border-bottom: 1px solid #bfbfbf;
+  text-align: center;
+}
+.wrapper form{
+  margin:35px 30px;
+}
+form .fields{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.fields .field{
+  height: 50px;
+  width:calc(100% / 2 - 13px);
+  position: relative;
+}
+form .field input{
+  height: 100%;
+  width:100%;
+  outline: none;
+  padding:0 18px 0 18px;
+  border:1px solid #bfbfbf;
+  border-radius: 5px;
+  font-size:16px;
+}
+form .field input::placeholder,
+form .message textarea::placeholder{
+  color:#bfbfbf;
+}
+form .field input:focus,
+form .message textarea:focus{
+  border:2px solid #e91e63;
+}
+.wrapper form i{
+  position: absolute;
+  left:10px;
+  top:50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color:#bfbfbf;
+  font-size: 17px;
+}
+form .message{
+  position:relative;
+}
+form .message i{
+  top:20px;
+  font-size: 20px;
+}
+form .field input:focus ~ i,
+form .message textarea:focus ~ i{
+  color:#e91e63;
+}
+form .message textarea{
+  min-height: 120px;
+  resize:none;
+  padding:6px 20px 0 20px;
+  height: 100%;
+  width:100%;
+  outline: none;
+  border:1px solid #bfbfbf;
+  border-radius: 5px;
+  font-size:16px;
+}
+form .button-area{
+  margin:25px 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.button-area input[type="submit"]{
+  padding:13px 25px;
+  font-size: 18px;
+  margin:auto;
+  border:none;
+  color:#fff;
+  background-color: #e91e63;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-area span{
+  color:#e91e63;
+  margin-left: 30px;
+  display: none;
+}
+@media screen and (max-width:600px){
+  .wrapper header{
+    text-align: center;
+  }
+  form .fields{
+    flex-direction: column;
+    margin-bottom:0;
+  }
+  .fields .field{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .button-area button{
+    width: 100%;
+  }
+  .button-area span{
+    margin-right: 20px 0;
+    text-align: center;
+  }
+}
